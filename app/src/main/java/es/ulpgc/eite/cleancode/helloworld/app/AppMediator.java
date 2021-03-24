@@ -44,19 +44,11 @@ public class AppMediator {
     return state;
   }
 
-  public ByeToHelloState getByeToHelloState() {
-    ByeToHelloState state = byeToHelloState;
-    byeToHelloState = null;
-    return state;
-  }
 
   public void setHelloToByeState(HelloToByeState state) {
     this.helloToByeState = state;
   }
 
-  public void setByeToHelloState(ByeToHelloState state) {
-    this.byeToHelloState = state;
-  }
 
   public ByeToHelloState getByeToHelloState() {
     ByeToHelloState state = byeToHelloState;
@@ -64,18 +56,10 @@ public class AppMediator {
     return state;
   }
 
-  public HelloToByeState getHelloToByeState() {
-    HelloToByeState state = helloToByeState;
-    helloToByeState = null;
-    return state;
-  }
 
   public void setByeToHelloState(ByeToHelloState state) {
     this.byeToHelloState = state;
   }
 
-  public void setHelloToByeState(HelloToByeState state) {
-    this.helloToByeState = state;
-  }
 }
 
