@@ -1,10 +1,12 @@
 package es.ulpgc.eite.cleancode.helloworld.app;
 
 import es.ulpgc.eite.cleancode.helloworld.hello.HelloState;
+import es.ulpgc.eite.cleancode.helloworld.bye.ByeState;
 
 public class AppMediator {
 
   private HelloState helloState;
+  private ByeState byeState;
 
   private HelloToByeState helloToByeState;
   private ByeToHelloState byeToHelloState;
@@ -13,7 +15,9 @@ public class AppMediator {
 
   private AppMediator() {
     helloState = new HelloState();
+    byeState = new ByeState();
   }
+
 
   public static void resetInstance() {
     INSTANCE = null;
@@ -30,15 +34,14 @@ public class AppMediator {
   public HelloState getHelloState() {
     return helloState;
   }
+  public ByeState getByeState() {
+    return byeState;
+  }
 
   public HelloToByeState getHelloToByeState() {
     HelloToByeState state = helloToByeState;
     helloToByeState = null;
     return state;
-  }
-
-  public void setHelloToByeState(HelloToByeState state) {
-    this.helloToByeState = state;
   }
 
   public ByeToHelloState getByeToHelloState() {
@@ -47,7 +50,32 @@ public class AppMediator {
     return state;
   }
 
+  public void setHelloToByeState(HelloToByeState state) {
+    this.helloToByeState = state;
+  }
+
   public void setByeToHelloState(ByeToHelloState state) {
     this.byeToHelloState = state;
   }
+
+  public ByeToHelloState getByeToHelloState() {
+    ByeToHelloState state = byeToHelloState;
+    byeToHelloState = null;
+    return state;
+  }
+
+  public HelloToByeState getHelloToByeState() {
+    HelloToByeState state = helloToByeState;
+    helloToByeState = null;
+    return state;
+  }
+
+  public void setByeToHelloState(ByeToHelloState state) {
+    this.byeToHelloState = state;
+  }
+
+  public void setHelloToByeState(HelloToByeState state) {
+    this.helloToByeState = state;
+  }
 }
+
