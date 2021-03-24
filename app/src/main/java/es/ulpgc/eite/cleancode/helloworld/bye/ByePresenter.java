@@ -1,10 +1,14 @@
 package es.ulpgc.eite.cleancode.helloworld.bye;
 
+import android.content.Intent;
+
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.cleancode.helloworld.app.AppMediator;
 import es.ulpgc.eite.cleancode.helloworld.app.ByeToHelloState;
 import es.ulpgc.eite.cleancode.helloworld.app.HelloToByeState;
+import es.ulpgc.eite.cleancode.helloworld.hello.HelloActivity;
+import es.ulpgc.eite.cleancode.helloworld.hello.HelloViewModel;
 
 public class ByePresenter implements ByeContract.Presenter {
 
@@ -70,10 +74,13 @@ public class ByePresenter implements ByeContract.Presenter {
   }
 
   private void passDataToHelloScreen(ByeToHelloState state) {
+    mediator.setByeToHelloState(state);
     //TODO: no implemented
   }
 
   private void navigateToHelloScreen() {
+
+
     //TODO: no implemented
   }
 

@@ -1,5 +1,6 @@
 package es.ulpgc.eite.cleancode.helloworld.bye;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import es.ulpgc.eite.cleancode.helloworld.R;
+import es.ulpgc.eite.cleancode.helloworld.hello.HelloActivity;
 
 
 public class ByeActivity
@@ -79,4 +81,6 @@ public class ByeActivity
   public void injectPresenter(ByeContract.Presenter presenter) {
     this.presenter = presenter;
   }
+
+
 }

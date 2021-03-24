@@ -70,6 +70,7 @@ public class HelloPresenter implements HelloContract.Presenter {
   }
 
   private void passDataToByeScreen(HelloToByeState state) {
+    mediator.setHelloToByeState(state);
     //TODO: no implemented
   }
 
